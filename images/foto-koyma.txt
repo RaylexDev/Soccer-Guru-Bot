@@ -1,0 +1,6 @@
+Bu klasore oyuncu fotograflarini koy.
+Ornek: messi.png, haaland.png, ronaldo.png
+
+oyuncu.js dosyasinda image alani:
+  image: "./images/messi.png"
+  
