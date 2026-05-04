@@ -1,0 +1,13 @@
+{
+  "name": "rywen-fc-bot",
+  "version": "11.0.0",
+  "description": "Rywen FC Discord Bot - Developed by RevanDev ZAD",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.0.0",
+    "@napi-rs/canvas": "^0.1.0"
+  }
+}
