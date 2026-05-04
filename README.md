@@ -1,80 +1,56 @@
-# Rywen FC Bot v11.0
-**Developed by RevanDev ZAD**
+# ⚽ Rywen Guru Bot 
+### Gelişmiş Futbol Menajer Botu
 
-## Kurulum
+> 🧠 **Geliştirici:** RaylexDev  
+> 🤖 **Konsept:** Soccer Guru tarzı gelişmiş futbol botu  
+> 🎮 Kendi takımını kur, oyuncu topla, maç yap ve zirveye oyna!
+
+---
+
+## 🚀 Özellikler
+
+- 🃏 Oyuncu kart sistemi (Canvas destekli)
+- 📦 Pack açma & oyuncu kazanma
+- 🏪 Transfer market sistemi
+- ⚔️ PvP maç sistemi
+- 💰 Ekonomi (bakiye, satış, kazanç)
+- 🛠️ Admin oyuncu ekleme sistemi
+- 🖼️ Dinamik kart görselleri
+
+---
+
+## 📦 Kurulum
 
 ```bash
 npm install
-```
-
-Canvas icin (oyuncu karti gorselleri):
-```bash
 npm install @napi-rs/canvas
-```
 
-## Baslat
+## ▶️ Başlatma
 
-```bash
-# .env.example dosyasini .env olarak kopyala ve tokenini yaz
 cp .env.example .env
-
 node index.js
-```
 
-## Klasor Yapisi
+## 📁 Klasör Yapısı
 
-```
 rywen-fc/
-├── index.js          # Ana bot
-├── oyuncu.js         # Oyuncu veritabani
-├── kart.js           # Canvas kart uretici
+├── index.js
+├── oyuncu.js
+├── kart.js
 ├── package.json
 ├── .env.example
-├── images/           # Oyuncu fotolari buraya
-│   └── messi.png     # ornek: ./images/messi.png
-├── logos/            # Takim logolari (opsiyonel)
-├── data.json         # Kullanici verileri (otomatik olusur)
-└── oyuncu_ekstra.json # Admin eklenen oyuncular (otomatik olusur)
-```
+├── images/
+│   └── messi.png
+├── logos/
+├── data.json
+└── oyuncu_ekstra.json
 
-## Oyuncu Fotografi Ekleme
+## 🖼️ Oyuncu Fotoğrafı Ekleme
 
-`oyuncu.js` dosyasinda `image` alanini doldur:
-
-```js
 {
   name: "Lionel Messi",
   pos: "ATT",
   rating: 95,
   rarity: "efsane",
   team: "Inter Miami",
-  image: "./images/messi.png"   // lokal dosya
-  // image: "https://..."       // URL de olur
-  // image: null                // silhouette goster
+  image: "./images/messi.png"
 }
-```
-
-## Admin Ayari
-
-`index.js` icinde `ADMIN_IDS` dizisine Discord ID'ni ekle:
-```js
-const ADMIN_IDS = ["123456789012345678"];
-```
-
-## Komutlar
-
-| Komut | Aciklama |
-|-------|----------|
-| `!pack` | Baslangic kadrosu al (bir kez) |
-| `!kadro` | Kadronu goster |
-| `!shop` | Transfer merkezi |
-| `!sat` | Oyuncu sat |
-| `!degistir` | Kadrodaki oyuncuyu degistir |
-| `!claim` | Her 5 saatte ucretsiz oyuncu |
-| `!mac @kullanici` | Mac daveti gonder |
-| `!bakiye` | Bakiyeni gor |
-| `!kart @kullanici [sira]` | Oyuncu karti goster |
-| `!bilgi [oyuncu adi]` | Oyuncu detaylari |
-| `!oyuncuekle` | *(Admin)* Yeni oyuncu ekle |
-| `!oyuncusil [ad]` | *(Admin)* Custom oyuncuyu sil |
-| `!oyunculiste` | *(Admin)* Custom oyunculari listele |
